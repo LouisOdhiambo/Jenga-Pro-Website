@@ -21,10 +21,10 @@ document.querySelectorAll('.tour-tab').forEach(tab => tab.addEventListener('clic
   document.querySelector('.tour-tab.active').classList.remove('active'); tab.classList.add('active'); setShot(tab.dataset.panel);
 }));
 const roles = {
-  contractor:['FOR THE CONTRACTOR','See the bigger picture.','Bring projects, people and materials into one operational view — so you can lead with current information.',['Active projects','03','On track','68%','People on site','48']],
-  engineer:['FOR THE ENGINEER','Stay close to the work.','Keep assigned projects, site activity and progress within easy reach as work moves forward.',['Assigned sites','03','Progress','68%','Reports today','03']],
-  foreman:['FOR THE FOREMAN','Run the day with clarity.','Keep workers, attendance and materials connected to the site activity you manage every day.',['Team present','22','Materials issued','04','Daily tasks','08']],
-  accounts:['FOR ACCOUNTS','Keep operations organized.','Use current project and operational records to stay connected to the financial side of the work.',['Project records','12','Items to review','02','Site updates','14']]
+  contractor:['FOR THE CONTRACTOR','See the bigger picture.','Bring projects, people and materials into one operational view — so you can lead with current information.','Active projects','03','On track','68%','People on site','48'],
+  engineer:['FOR THE ENGINEER','Stay close to the work.','Keep assigned projects, site activity and progress within easy reach as work moves forward.','Assigned sites','03','Progress','68%','Reports today','03'],
+  foreman:['FOR THE FOREMAN','Run the day with clarity.','Keep workers, attendance and materials connected to the site activity you manage every day.','Team present','22','Materials issued','04','Daily tasks','08'],
+  accounts:['FOR ACCOUNTS','Keep operations organized.','Use current project and operational records to stay connected to the financial side of the work.','Project records','12','Items to review','02','Site updates','14']
 };
 const roleLabel=document.querySelector('#role-label'),roleTitle=document.querySelector('#role-title'),roleCopy=document.querySelector('#role-copy'),rolePreview=document.querySelector('#role-preview');
 function paintRole(key){const r=roles[key];roleLabel.textContent=r[0];roleTitle.textContent=r[1];roleCopy.textContent=r[2];rolePreview.innerHTML=`<div class="role-data"><small>${r[3]}</small><b>${r[4]}</b></div><div class="role-data"><small>${r[5]}</small><b>${r[6]}</b></div><div class="role-data"><small>${r[7]}</small><b>${r[8]}</b></div>`}
